@@ -5,7 +5,7 @@
 * **Unidad:** _Producto final_
 
 ***
-##Integrantes del equipo:
+## Integrantes del equipo:
 
 Mariana Romo de Vivar Islas. 
 
@@ -13,7 +13,8 @@ Mariana Romo de Vivar Islas.
 # Planeación 
 Fase de diseño de experiencia: donde se diseña el sitio y la experiencia que se busca otorgar al usuario.
 
-## 1.Gestión de requerimientos.//Donde se definen los usuarios, sus requerimientos, los objetivos.
+## 1.Gestión de requerimientos.
+*//Donde se definen los usuarios, sus requerimientos, los objetivos.*
 
 **-Necesidades del cliente (usuario).**
 *//¿Qué es lo que el cliente necesita?*
@@ -30,14 +31,14 @@ Se nos ha pedido que la información contenida en el sitio incluya:
 	8. Puntuación promedio de jedis masters.
 	9. Satisfacción de los estudiantes.
 	
-##2.Definición de los objetivo del sitio.
+## 2.Definición de los objetivo del sitio.
 *//Cuál es el fin de nuestro sitio web.*
 Se busca desarrollar un sitio web que cumpla con las necesidades del usuario, sea fácil de usar y que facilite la tarea de las TM proporcionando información ordenada de forma clara y con datos concisos. 
 
 *//Cómo se vislumbramos el desempeño del sitio en el futuro.*
 En vistas de que el proyecto es muy amplio y el tiempo limitado buscaremos dejar abiertas las posibilidades de incluir nueva funcionabilidad en el sitio, así como dejar listos elementos para que en un futuro se le pueda añadir nuevas características.
 
-##3.Necesidades del proyecto.**
+## 3.Necesidades del proyecto.**
 *//Qué es lo que necesita el proyecto para ser exitoso.*
 
 	• Cumplir con las necesidades de los usuarios. 
@@ -47,7 +48,7 @@ En vistas de que el proyecto es muy amplio y el tiempo limitado buscaremos dejar
 	• Navegación fácil e intuitiva. 
 	• Capacidad para implementar nuevas características a futuro.
 
-##4. Propuesta de diseño (prototipado).
+## 4. Propuesta de diseño (prototipado).
 *//Donde se confecciona una maqueta del producto final.*
 
 **-Estructura de la página web.**
@@ -106,15 +107,15 @@ La estructura básica contará de lo siguiente:
 	8. Calificación de jedis. 
 	
 
-##-Diseño visual.
+## -Diseño visual.
 *//Cuál va a ser el diseño visual y por qué.*
 Para la realización del sitio web se seguirán los principios del minimalismo, teniendo en cuenta que menos es más.  Se seguirán los lineamientos de la marca (branding) utilizando las mismas tipografías y paletas de colores ya pre-establecidas para buscar una uniformidad en la representación. 
 
-##-Diseño de navegación.
+## -Diseño de navegación.
 *//Cuál va a ser el diseño de la navegación y por qué.*
 Se realizará una navegación sencilla para que buscar que la curva de aprendizaje sea mínima y la navegación, intuitiva. Estableceremos un menú dropdown en la esquina superior izquierda con el objetivo de disminuir la saturación visual.  Colocaremos también una barra de navegación global en la que se detallarán las posibles sedes y generaciones, así como la pestaña en la que nos encontramos. 
 
-##-Diseño de la información.
+## -Diseño de la información.
 *//Qué información va a contener el sitio y por qué.*
 Se buscará que la información presentada sea concisa y precisa. Presentando únicamente los datos esenciales. Para propósitos prácticos, basados en la importancia y usabilidad, la información en la vista general se dividió de la siguiente forma: 
 
@@ -124,7 +125,7 @@ Se buscará que la información presentada sea concisa y precisa. Presentando ú
 	4. Información de estudiantes, maestros y jedis. 
 	
 
-##-Sketch.
+## -Sketch.
 *//Realización del sketch.*
 
 
@@ -133,7 +134,7 @@ Se buscará que la información presentada sea concisa y precisa. Presentando ú
 ![Segundo Sketch](./assets/images/sketch2.jpg)
 
 
-##4. Planeación (detallada).
+## 4. Planeación (detallada).
 //Definición de actividades  (Qué necesitamos hacer, cómo lo vamos a hacer, y cuánto
 tiempo nos debe de tomar hacerlo).
 ![Segundo Sketch](./assets/images/plan.png)
