@@ -274,18 +274,7 @@
     -webkit-transform: translateX(-3px);
     transform: translateX(-3px);
   }
-  /*Colocamos un hover a los gráficos*/
-  #piechart4:hover {
-    box-shadow: 2px 2px #F8C039, 3px 3px #F8C039, 4px 4px #F8C039;
-    -webkit-transform: translateX(-3px);
-    transform: translateX(-3px);
-  }
-  /*Colocamos un hover a los gráficos*/
-  #piechart5:hover {
-    box-shadow: 2px 2px #F8C039, 3px 3px #F8C039, 4px 4px #F8C039;
-    -webkit-transform: translateX(-3px);
-    transform: translateX(-3px);
-  }
+
   /*Colocamos estilo a los objetos creados con el DOM*/
   .enrollment {
     font-family: 'Roboto', sans-serif;

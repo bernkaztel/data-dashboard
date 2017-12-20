@@ -470,18 +470,19 @@ function getData(event) {
     /*Añadimos la sección para cambiar de pestaña*/
     var addAndHide = function (event) {
         var tabSeleccionado = event.target.dataset.tabSelect;
-        var overview = document.getElementById('section-overview2');
+        var overview = document.getElementById('section-overview');
         var students = document.getElementById('section-students');
         var teachers = document.getElementById('section-teachers');
-        if (tabSeleccionado === 'section-overview2') { 
+
+        if (tabSeleccionado === 'tabOverview') {
             students.style.display = 'none';
             teachers.style.display = 'none';
             overview.style.display = 'block';
-        } else if (tabSeleccionado === 'section-students') { 
+        } else if (tabSeleccionado === 'tabStudents') {
             students.style.display = 'block';
             teachers.style.display = 'none';
             overview.style.display = 'none';
-        } else if (tabSeleccionado === 'section-teachers') { 
+        } else if (tabSeleccionado === 'tabTeachers') {
             students.style.display = 'none';
             teachers.style.display = 'block';
             overview.style.display = 'none';
@@ -587,6 +588,7 @@ var login = document.getElementById("login")
 //Declaramos que estamos "listening for events" 
 //Que el evento se tiene que ejecutar cuando se cargue la página
 modal.addEventListener(onload, showModal);
+
 function showModal(event) {
     modal.style.display = "block";
     close.onclick = function () {
@@ -596,4 +598,3 @@ function showModal(event) {
         modal.style.display = "none";
     }
 }
-
