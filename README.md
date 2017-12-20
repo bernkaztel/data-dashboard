@@ -38,7 +38,7 @@ Se busca desarrollar un sitio web que cumpla con las necesidades del usuario, se
 *//Cómo se vislumbramos el desempeño del sitio en el futuro.*
 En vistas de que el proyecto es muy amplio y el tiempo limitado buscaremos dejar abiertas las posibilidades de incluir nueva funcionabilidad en el sitio, así como dejar listos elementos para que en un futuro se le pueda añadir nuevas características.
 
-## 3.Necesidades del proyecto.**
+## 3.Necesidades del proyecto.
 *//Qué es lo que necesita el proyecto para ser exitoso.*
 
 	• Cumplir con las necesidades de los usuarios. 
