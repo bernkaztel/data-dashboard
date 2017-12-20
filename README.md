@@ -128,9 +128,9 @@ Se buscará que la información presentada sea concisa y precisa. Presentando ú
 ## -Sketch.
 *//Realización del sketch.*
 
-
+**Primer Sketch**
 ![Primer Sketch](./assets/images/sketch.jpg)
-
+**Segundo Sketch**
 ![Segundo Sketch](./assets/images/sketch2.jpg)
 
 
@@ -139,3 +139,24 @@ Se buscará que la información presentada sea concisa y precisa. Presentando ú
 tiempo nos debe de tomar hacerlo).
 ![Segundo Sketch](./assets/images/plan.png)
 
+
+# Desarrollo 
+
+##Funcionalidad de JavaScript 
+
+**Pseudocódigo** 
+1. Se crea una función para buscar la generación y sede seleccionadas. 
+2. Se obtiene un array con las estudiantes. 
+2. Se crea un nuevo array conteniendo a las estudiantes  que se encuentran activas. 
+3. Buscamos el número de estudiantes activas restando el array de estudiantes original menos el array de estudiantes activas. 
+4. Buscamos el número y porcentaje de estudiantes que cumplen con los objetivos obteniendo el puntaje TECH y HSE, sacando un promedio y colocando un contador que vaya sumando si se cumple el porcentaje mínimo del 70%.  
+5. Buscamos el número de estudiantes que no pasaron restando el total de estudiantes menos las estudiantes que pasaron los criterios y sacamos el porcentaje. 
+6. Buscamos el NPS sacando un promedio de las passive, detactors y promoters. 
+7. Sacamos el NPS acumulado sacando el numero acumulado de detractors y promoters y restándolos. Después sacamos el porcentaje acumulado. 
+8. Sacamos el rating de los maestros buscando su puntaje en cada uno de los sprints y sacando un promedio. 
+9. Buscamos a los alumnos que cumplen el 70% de puntaje TECH buscando a aquellos estudiantes cuya calificación esté por encima de 1260 puntos y estableciendo un contador. 
+10. Buscamos a los alumnos que cumplen el 70% de puntaje HSE buscando a aquellos estudiantes cuya calificación esté por encima de 840 puntos y estableciendo un contador. 
+11. A cada uno de estos puntos que equivalen a la pestaña de general los insertamos dentro de sus contenedores buscando por ID donde los vamos a insertar, creando el nuevo elemento, quitando el hijo anterior y anexando el nuevo hijo al padre. Finalmente les colocamos la clase asignada. 
+12. Creamos la función que dibujará las gráficas colocando primero la funcionabilidad de google charts, y después los datos, las opciones y finalmetne tenemos la creación del gráfico. 
+13. Creamos la función que mostrará y ocultará las pestañas dependiendo de cuál esté siendo visualizada. 
+14. Creamos el modal que pedirá el Log-In cuando se inicie la página, lo hacemos por medio de un evento que se ejecute cuando la página esté cargada. 
