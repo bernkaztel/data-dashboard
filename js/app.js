@@ -470,18 +470,18 @@ function getData(event) {
     /*Añadimos la sección para cambiar de pestaña*/
     var addAndHide = function (event) {
         var tabSeleccionado = event.target.dataset.tabSelect;
-        var overview = document.getElementById('section-overview');
+        var overview = document.getElementById('section-overview2');
         var students = document.getElementById('section-students');
         var teachers = document.getElementById('section-teachers');
-        if (tabSeleccionado === 'tabOverview') { 
+        if (tabSeleccionado === 'section-overview2') { 
             students.style.display = 'none';
             teachers.style.display = 'none';
             overview.style.display = 'block';
-        } else if (tabSeleccionado === 'tabStudents') { 
+        } else if (tabSeleccionado === 'section-students') { 
             students.style.display = 'block';
             teachers.style.display = 'none';
             overview.style.display = 'none';
-        } else if (tabSeleccionado === 'tabTeachers') { 
+        } else if (tabSeleccionado === 'section-teachers') { 
             students.style.display = 'none';
             teachers.style.display = 'block';
             overview.style.display = 'none';
@@ -578,16 +578,17 @@ function getData(event) {
         chart9.draw(data9, options);
     }
 }
-//La fuente del evento, es el select con el id de "Filter"
+//Para ejecutar el modal al inicio
+//Buscamos el modal, el ícono de close y el botón de login
 var modal = document.getElementById("myModal");
 var close = document.getElementById("close")
 var login = document.getElementById("login")
 //console.log(source);
 //Declaramos que estamos "listening for events" 
+//Que el evento se tiene que ejecutar cuando se cargue la página
 modal.addEventListener(onload, showModal);
 function showModal(event) {
     modal.style.display = "block";
-    // When the user clicks on <span> (x), close the modal
     close.onclick = function () {
         modal.style.display = "none";
     }
