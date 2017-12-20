@@ -1,14 +1,376 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Dashboard</title>
-  </head>
-  <body>
 
-		<!-- Base de datos -->
-		<script src="./js/data.js"></script>
-		<!-- Aquí va tus archivos JS -->
-    <script src="./js/app.js"></script>
-  </body>
+<head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <!--El idioma de la página web-->
+  <html lang="es">
+  <!--El tipo de carácteres-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Se sincroniza el archivo css-->
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <!--Se coloca el link de los icons-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--Se vincula tipografía-->
+  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300|Roboto|Dosis:300|Teko:600|Yantramanav:700|Julius+Sans+One|Yanone+Kaffeesatz:300"
+    rel="stylesheet">
+  <!--El título de la web page-->
+  <title>Data Dashboard</title>
+  <!--Creación de la barra de navegación-->
+  <nav>
+    <!--Creación del container donde va la barra de navegación-->
+    <div id="navcontainer">
+      <!--Creación del container donde va el menu desplegable-->
+      <div class="dropdown">
+        <div class="dropbtn">
+          <i id="menuicon" class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+        <!--Creamos el contenido del menú dropdown -->
+        <div class="dropdown-content">
+          <a href="#">MI PERFIL</a>
+          <a href="#">CONFIGURACIÓN</a>
+          <a href="#">LOG OUT</a>
+        </div>
+      </div>
+      <!--Creación del container donde va el logo-->
+      <img id="logo" src="assets/images/logo.png" alt="Logo de Laboratoria" height="60px" width="180px">
+      <img id="profile" src="assets/images/profile.png" alt="Foto de perfil" height="50px" width="50px">
+    </div>
+  </nav>
+</head>
+
+<body>
+  <img src="assets/images/bar.jpg"  width="100%" alt="">
+  <!--Creamos el modal que va a tener el inicio de sesión-->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span id="close" class="close">&times;</span>
+      <p id="log">INICIO DE SESIÓN</p>
+      <p class="input2">COLOCA TU NOMBRE DE USUARIO</p>
+      <input class="input" type="text">
+      <p class="input2">COLOCA TU CONTRASEÑA</p>
+      <input class="input" type="password" name="" id="">
+      <button id="login">LOG IN</button>
+    </div>
+  </div>
+  <!--Le pedimos que cuando se cargue la página se ejecute la función ShowModal-->
+
+  <body onload="showModal()"></body>
+  <!--Creamos el container del body-->
+  <div id="section-overview2">
+    <!--Creamos el container de la navegación local -->
+    <div id="localnavigation">
+      <!--Creamos el input donde estará la selección del filtro -->
+      <div class="ins">SELECCIONA LA SEDE Y GENERACIÓN AQUÍ</div>
+      <select name="" id="filter">
+        <!--Creamos cada una de las opciones posibles del filtro -->
+        <option class="filteroption" data-filter="generacion1">---</option>
+        <!--Creamos cada una de las opciones posibles del filtro -->
+        <option value="" hidden>Selecciona una opción</option>
+        <optgroup label="Arequipa">
+          <option value="AQP" data-year="2016-2">AQP 2016 - II</option>
+          <option value="AQP" data-year="2017-1">AQP 2017 - I</option>
+        </optgroup>
+        <optgroup label="Lima">
+          <option value="LIM" data-year="2016-2">LIM 2016 - II</option>
+          <option value="LIM" data-year="2017-1">LIM 2017 - I</option>
+          <option value="LIM" data-year="2017-2">LIM 2017 - II</option>
+        </optgroup>
+        <optgroup label="México">
+          <option value="CDMX" data-year="2017-1">CDMX 2017 - I</option>
+          <option value="CDMX" data-year="2017-2">CDMX 2017 - II</option>
+        </optgroup>
+        <optgroup label="Chile">
+          <option value="SCL" data-year="2016-2">SCL 2016 - II</option>
+          <option value="SCL" data-year="2017-1">SCL 2017 - I</option>
+          <option value="SCL" data-year="2017-2">SCL 2017 - II</option>
+        </optgroup>
+      </select>
+      <!--Creamos las pestañas de las tabs disponibles -->
+      <button id="overviewTab" class="tab" data-tab-select='tabOverview'>GENERAL</button>
+      <button id="studentsTab" class="tab" data-tab-select='tabStudents'>ALUMNAS</button>
+      <button id="teachersTab" class="tab" data-tab-select='tabTeachers'>MAESTROS</button>
+    </div>
+    <!--Creamos la sección de la vista general -->
+    <section id="section-overview">
+      <section class="generalsectioncontainer">
+        <div class="rows3">
+          <!--Creamos la sección de general -->
+          <div class="banner">GENERAL</div>
+          <section class="general-section">
+            <!--Creamos la sección de achievement -->
+            <div class="subbanner">
+              <br>
+              <br>
+              <br>
+              <br>ACHIEVE-
+              <br>MENT</div>
+            <!--Insertamos el gráfico -->
+            <div id="piechart"></div>
+            <div class="textarea">
+              <div class="textarea1">
+                <!--Creamos el numero de estudiantes que cumplen con el 70%-->
+                <div class="textnumber" id="achievement-parent">
+                </div>
+                <div class="textsubtitle">STUDENTS THAT MEET THE TARGET</div>
+              </div>
+              <div class="textarea1">
+                <!--Creamos el porcentaje de que cumplen con el porcentaje -->
+                <div class="textnumber" id="achievement-percentage">
+                </div>
+                <div class="textsubtitle">OF TOTAL</div>
+              </div>
+            </div>
+          </section>
+          <section class="general-section">
+            <!--Creamos del NPS -->
+            <div class="subbanner">
+              <br>
+              <br>
+              <br>
+              <br>
+              <br> PROMOTER SCORE (NPS)</div>
+            <!--Insertamos el gráfico-->
+            <div id="piechart2"></div>
+            <div class="textarea">
+              <div class="textarea1">
+                <div class="textnumber1">
+                  <!--Creamos los porcentajes de cada una -->
+                  <p class="textnps" id="promoters-percentage">PROMOTERS</p>
+                  <p class="textnps2" id="passives-percentage">PASSIVES</p>
+                  <p class="textnps3" id="detractors-percentage">DETRACTORS</p>
+                </div>
+              </div>
+              <div class="textarea1">
+                <div class="textnumber" id="nps-percentage">
+                </div>
+                <!--Creamos el nps acumulativo-->
+                <div class="textsubtitle" id="npsacumulative-number">ACUMULATIVE NPS</div>
+                <div class="textsubtitle">ACUMULATIVE NPS OF TOTAL</div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div id="column2">
+          <div class="rows3">
+            <!--Creamos la sección de enrollment -->
+            <div class="subbanner">ENROLLMENT</div>
+            <!--Colocamos el gráfico-->
+            <div id="piechart3"></div>
+            <div class="columns2">
+              <div class="textarea">
+                <div class="textarea1">
+                  <!--Creamos el numero de estudiantes enroladas -->
+                  <div class="textnumber" id="enrolled-number">
+                  </div>
+                  <div class="textsubtitle">STUDENTS CURRENTLY ENROLLED</div>
+                </div>
+              </div>
+              <div class="textarea" id="secondtextarea">
+                <div class="textarea1">
+                  <!--Creamos el porcentaje de dropout -->
+                  <div class="textnumber" id="dropout-percentage">
+                  </div>
+                  <div class="textsubtitle">DROPOUT RATE</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Creamos la sección de Tech Skills-->
+      <section class="generalsectioncontainer2">
+        <div class="column2">
+          <div class="rows31">
+            <div class="banner1">TECH SKILLS</div>
+            <img src="assets/images/rectangular-graphic.png" height="100%" width="100%" alt="">
+            <div class="columns2">
+              <div class="textarea">
+                <div class="textarea1">
+                  <!--Creamos el numero de tech skills -->
+                  <div class="textnumber" id="techskills-number">
+                  </div>
+                  <div class="textsubtitle">STUDENTS THAT MEET THE TARGET</div>
+                </div>
+              </div>
+              <div class="textarea">
+                <div class="textarea1">
+                  <!--Creamos el porcentaje de hse -->
+                  <div class="textnumber" id="techskills-percentage">
+                  </div>
+                  <div class="textsubtitle">OF TOTAL</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column2">
+          <div class="rows31">
+            <!--Creamos el input donde estará la selección del filtro de sprint-->
+            <select name="" id="filter2">
+              <!--Creamos cada una de las opciones posibles del filtro de sprint-->
+              <option class="filteroption" data-filter="generacion1">---</option>
+              <optgroup label="Common Core">
+                <option class="filteroption" data-sprint="0">Sprint 1: Create an interactive site</option>
+                <option class="filteroption" data-sprint="1">Sprint 2: Create an interactive site</option>
+                <option class="filteroption" data-sprint="2">Sprint 3: Create an interactive site</option>
+                <option class="filteroption" data-sprint="3">Sprint 4: Create an interactive site</option>
+                <optgroup label="Java Script">
+                  <option class="filteroption" data-sprint="4">Sprint 5: Create an interactive site</option>
+                  <option class="filteroption" data-sprint="5">Sprint 6: Create an interactive site</option>
+                  <option class="filteroption" data-sprint="6">Sprint 7: Create an interactive site</option>
+                  <option class="filteroption" data-sprint="7">Sprint 8: Create an interactive site</option>
+                  <optgroup label="UX Desing">
+                    <option class="filteroption" data-sprint="8">Sprint 9: Create an interactive site</option>
+                    <option class="filteroption" data-sprint="9">Sprint 10: Create an interactive site</option>
+                    <option class="filteroption" data-sprint="10">Sprint 11: Create an interactive site</option>
+                    <option class="filteroption" data-sprint="12">Sprint 12: Create an interactive site</option>
+            </select>
+            <!--Creamos el gráfico -->
+            <div id="piechart4"></div>
+      </section>
+      <section class="generalsectioncontainer2">
+        <div class="column2">
+          <div class="rows31">
+            <!--Creamos la sección de life skills -->
+            <div class="banner1">LIFE SKILLS</div>
+            <img src="assets/images/rectangular-graphic.png" height="100%" width="100%" alt="">
+            <div class="columns2">
+              <div class="textarea">
+                <div class="textarea1">
+                  <!--Creamos el numero de hse skills -->
+                  <div class="textnumber" id="lifeskills-number">
+                  </div>
+                  <div class="textsubtitle">STUDENTS THAT MEET THE TARGET</div>
+                </div>
+              </div>
+              <div class="textarea" id="secondtextarea">
+                <div class="textarea1">
+                  <!--Creamos el porcentaje de hse skills -->
+                  <div class="textnumber" id="lifeskills-percentage">
+                  </div>
+                  <div class="textsubtitle">OF TOTAL</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column2">
+          <div class="rows31">
+            <!--Creamos el input donde estará la selección del filtro del sprint -->
+            <select name="" id="filter3">
+              <!--Creamos cada una de las opciones posibles del filtro del sprint -->
+              <option class="filteroption" data-filter="generacion1">---</option>
+              <optgroup label="Common Core">
+                <option class="filteroption" data-sprint="0">Sprint 1: Create an interactive site</option>
+                <option class="filteroption" data-sprint="1">Sprint 2: Create an interactive site</option>
+                <option class="filteroption" data-sprint="2">Sprint 3: Create an interactive site</option>
+                <option class="filteroption" data-sprint="3">Sprint 4: Create an interactive site</option>
+                <optgroup label="Java Script">
+                  <option class="filteroption" data-sprint="4">Sprint 5: Create an interactive site</option>
+                  <option class="filteroption" data-sprint="5">Sprint 6: Create an interactive site</option>
+                  <option class="filteroption" data-sprint="6">Sprint 7: Create an interactive site</option>
+                  <option class="filteroption" data-sprint="7">Sprint 8: Create an interactive site</option>
+                  <optgroup label="UX Desing">
+                    <option class="filteroption" data-sprint="8">Sprint 9: Create an interactive site</option>
+                    <option class="filteroption" data-sprint="9">Sprint 10: Create an interactive site</option>
+                    <option class="filteroption" data-sprint="10">Sprint 11: Create an interactive site</option>
+                    <option class="filteroption" data-sprint="12">Sprint 12: Create an interactive site</option>
+            </select>
+            <!--Creamos el gráfico -->
+            <div id="piechart5"></div </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="lastsectioncontainer">
+          <!--Creamos la última sección -->
+          <div class="column1">
+            <!--Creamos la sección de satisfacción de estudiante-->
+            <div class="subbanner">STUDENT SATISFACTION</div>
+            <!--Creamos el gráfico -->
+            <div id="piechart9"></div>
+            <div class="textarea" id="secondtextarea">
+              <div class="textarea1">
+                <!--Creamos el porcentaje de satisfacción-->
+                <div class="textnumber" id="satisfaction-percentage">
+                </div>
+                <div class="textsubtitle">MEETING OR EXCEEDING EXPECTATIONS</div>
+              </div>
+            </div>
+          </div>
+          <div class="column1">
+            <!--Creamos la sección de calificación de profesores -->
+            <div class="subbanner">TEACHER RATING</div>
+            <div id="piechart7"></div </div>
+            <div class="textarea">
+              <div class="textarea1">
+                <!--Creamos el promedio de calificación de profesores-->
+                <div class="textnumber" id="teacher-percentage">
+                </div>
+                <div class="textsubtitle">OVERALL TEACHER RATING</div>
+              </div>
+            </div>
+          </div>
+          <div class="column1">
+            <!--Creamos la sección de calificación de jedi -->
+            <div class="subbanner">JEDI MASTER RATING</div>
+            <!--Creamos el gráfico -->
+            <div id="piechart8"></div>
+            <div class="textarea">
+              <div class="textarea1">
+                <!--Creamos el promedio de calificación del jedi-->
+                <div class="textnumber" id="jedi-percentage">
+                </div>
+                <div class="textsubtitle">OVERALL JEDI RATING</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+    </section>
+    <!--Creamos la pestaña de  estudiantes-->
+    <section id="section-students">
+      <!--Creamos el contenedor de estudiantes -->
+      <div class="studentcontainer">
+        <!--Creamos el nombre de la estudiante -->
+        <div class="studentname">
+          MARINA MALLORCA
+        </div>
+        <div class="twocolum">
+          <img class="studentprofile" src="assets/images/profile.png" alt="">
+          <!--Creamos las calificaciones tech-->
+          <div class="studentscores">
+            <div class="title">
+              1200
+            </div>
+            <div class="subtitle">
+              PROMEDIO TECH
+            </div>
+          </div>
+          <!--Creamos las calificaciones hse -->
+          <div class="studentscores">
+            <div class="title">
+              860
+            </div>
+            <div class="subtitle">
+              PROMEDIO HSE
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!--Creamos la sección de teachers-->
+    <section id="section-teachers">
+
+    </section>
+    <!-- Aquí añadimos la base de datos -->
+    <script src="js/data.js"></script>
+    <!-- Aquí añadimos el archivo de JS -->
+    <script src="js/app.js"></script>
+</body>
+
 </html>

@@ -1,0 +1,509 @@
+
+/*  Quitamos el margin y el padding por default a todos los elementos*/
+* {
+    margin: 0;
+    padding: 0;
+  }
+  /*Colocamos estilo al contenedor de la barra de navegación*/
+  #navcontainer {
+    height: 70px;
+    background-color: white;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% auto 20%
+  }
+  /*Colocamos estilo al menú dropdown*/
+  #dropdownmenu {
+    justify-self: start;
+    margin: 10px;
+  }
+  /*Colocamos estilo al menu icon*/
+  #menuicon {
+    color: black;
+    font-size: 30px;
+    margin: 10px;
+  }
+  /*Colocamos estilo al logo de laboratoria*/
+  #logo {
+    justify-self: start;
+    margin-left: 27%;
+    margin-top: 10px;
+  }
+  /*Colocamos estilo al ícono de laboratoria*/
+  #profile {
+    justify-self: end;
+    margin: 10px;
+  }
+  /*Le damos color de fondo al body*/
+  body {
+    background-color: rgb(237, 237, 237)
+  }
+  /*Colocamos un margen a todo el contenedor del body*/
+  #section-overview2 {
+    margin-left: 2%;
+    margin-right: 2%
+  }
+  /*Creamos el estilo de la segunda barra de navegación con un grid*/
+  #localnavigation {
+    margin-top: 2%;
+    height: 10%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 30% 10% 10% 10%;
+    grid-gap: 30px;
+    justify-content: center;
+  }
+  /*Colocamos estilo al filtro para seleccionar sede y año*/
+  #filter {
+    background-color: white;
+    color: #F8C039;
+    font-size: 20px;
+    border: solid 2px #F8C039;
+    font-family: 'Alegreya Sans SC', sans-serif;
+  }
+  
+  /*Colocamos estilo al filtro para seleccionar sede y año*/
+  #filter2 {
+    background-color: white;
+    color: #F8C039;
+    font-size: 20px;
+    border: solid 2px #F8C039;
+    font-family: 'Alegreya Sans SC', sans-serif;
+  }
+  
+  /*Colocamos estilo al filtro para seleccionar sede y año*/
+  #filter3 {
+    background-color: white;
+    color: #F8C039;
+    font-size: 20px;
+    border: solid 2px #F8C039;
+    font-family: 'Alegreya Sans SC', sans-serif;
+  }
+  
+  /*  TODO: CHECAR PORQUE NO SE APLICA EL ESTILO A OPTION  */
+  /*Colocamos estilo al texto del filtro*/
+  #filter>option {
+    font-size: 15px;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    color: #F8C039;
+  }
+  /*Colocamos estilo al texto del filtro*/
+  #filter>optgroup {
+    font-family: 'Alegreya Sans SC', sans-serif;
+  }
+  /*Colocamos estilo a los botones de las pestañas*/
+  .tab {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    background-color: rgb(248, 191, 57);
+    border-bottom: 3px solid rgb(223, 171, 51);
+  }
+  /*Colocamos un hover a los botones de las pestañas*/
+  .buttonnavigation:hover {
+    background-color: rgba(133, 133, 133, 0.344);
+    border-bottom: 3px solid rgb(158, 158, 158);
+  }
+  /*Creamos el container de la sección general*/
+  .generalsectioncontainer {
+    margin-top: 2%;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 58% 40%;
+    grid-column-gap: 2%;
+  }
+  /*Colocamos estilo a la primera cuadrícula con tres filas por medio de un grid*/
+  .rows3 {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 6% 45% 45%;
+    grid-row-gap: 4%;
+  }
+  /*Colocamos estilo al banner*/
+  .banner1 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(248, 191, 57, 0.80);
+    border-bottom: 5px solid rgba(223, 169, 51, 0.892);
+    color: white;
+    font-size: 30px;
+    padding-top: 10px;
+    letter-spacing: 5px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+  }
+  /*Colocamos estilo al segundo banner, aquél que no necesita espacio superior*/
+  .banner {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(248, 191, 57, 0.80);
+    border-bottom: 5px solid rgba(223, 169, 51, 0.892);
+    color: white;
+    font-size: 30px;
+    padding: 5px;
+    letter-spacing: 5px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+  }
+  /*Colocamos estilo a la sección general por medio de un grid con tres columnas*/
+  .general-section {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 14% 57% 23%;
+    grid-column-gap: 3%
+  }
+  /*Colocamos estilo al subbaner*/
+  .subbanner {
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+    background-color: rgba(133, 133, 133, 0.344);
+    border-bottom: 5px solid rgb(158, 158, 158);
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+  }
+  /*Colocamos estilo al text area con dosfilas por medio de un grid*/
+  .textarea {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-rows: 1fr 1fr;
+  }
+  /*Colocamos estilo al textarea*/
+  .textarea1 {
+    background-color: rgba(248, 191, 57, 0.541);
+    border-bottom: 5px solid rgba(223, 169, 51, 0.541);
+    border-radius: 20px;
+    padding: 20px;
+  }
+  /*Colocamos estilo al número */
+  .textnumber {
+    font-size: 40px;
+    font-style: bold;
+    text-align: center;
+  }
+  /*Colocamos estilo al número*/
+  .textnumber1 {
+    font-size: 15px;
+    font-style: bold;
+    text-align: center;
+  }
+  /*Colocamos estilo al texto del nps*/
+  .textnps {
+    font-size: 10px;
+  }
+  /*Colocamos estilo al subtítulo del nps*/
+  .textsubtitle {
+    font-size: 15px;
+    text-align: center;
+    font-family: 'Alegreya Sans SC', sans-serif;
+  }
+  /*Colocamos una clase de dos columnas por medio de grid*/
+  .columns2 {
+    height: 100%;
+    width: 100%;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 70px;
+  }
+  /*Colocamos estilo al contenedor de skills con dos columnas por medio de grid*/
+  .generalsectioncontainer2 {
+    margin-top: 6%;
+    width: 100%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 60% 38%;
+    grid-column-gap: 2%;
+    background-color: rgba(255, 255, 255, 0.40);
+  }
+  /*Colocamos estilo al contenedor de skills con los dos botones*/
+  .rows31 {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 6% 30% 10%;
+    grid-row-gap: 4%;
+  }
+  /*Colocamos estilo al contenedor de la última sección*/
+  #lastsectioncontainer {
+    margin-top: 5%;
+    padding-bottom: 10%;
+    width: 100%;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-column-gap: 4.5%;
+  }
+  /*Colocamos estilo al contenedor de la sección de jedi, teacher y nps*/
+  .column1 {
+    display: grid;
+    grid-template-rows: 20px 300px 100px;
+    grid-row-gap: 20px;
+  }
+  /*Colocamos un hover al textarea*/
+  .textarea1:hover {
+    box-shadow: 4px 4px rgb(169, 169, 169), 2px 2px rgb(163, 163, 163), 3px 3px #F8C039;
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+  }
+  /*Colocamos un hover a los gráficos*/
+  #piechart:hover {
+    box-shadow: 2px 2px #F8C039, 3px 3px #F8C039, 4px 4px #F8C039;
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+  }
+  /*Colocamos un hover a los gráficos*/
+  #piechart2:hover {
+    box-shadow: 2px 2px #F8C039, 3px 3px #F8C039, 4px 4px #F8C039;
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+  }
+  /*Colocamos un hover a los gráficos*/
+  #piechart3:hover {
+    box-shadow: 2px 2px #F8C039, 3px 3px #F8C039, 4px 4px #F8C039;
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+  }
+  /*Colocamos un hover a los gráficos*/
+  #piechart4:hover {
+    box-shadow: 2px 2px #F8C039, 3px 3px #F8C039, 4px 4px #F8C039;
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+  }
+  /*Colocamos un hover a los gráficos*/
+  #piechart5:hover {
+    box-shadow: 2px 2px #F8C039, 3px 3px #F8C039, 4px 4px #F8C039;
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+  }
+  /*Colocamos estilo a los objetos creados con el DOM*/
+  .enrollment {
+    font-family: 'Roboto', sans-serif;
+  }
+  /*Colocamos un estilo a los números en rojo*/
+  .dropout-red {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    color: red;
+  }
+  /*Colocamos un estilo a los números en verde*/
+  .dropout-green {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    color: green;
+  }
+  /*Colocamos un estilo a los números en rojo con mayor tamaño de letra*/
+  .acu-red {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    color: red;
+    font-size: 40px;
+  }
+  /*Colocamos un estilo a los números en verde con mayor tamaño de letra*/
+  .acu-green {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    color: green;
+    font-size: 40px;
+  }
+  /*Colocamos un estilo a los números en verde con menor tamaño de letra*/
+  .textnps {
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    color: green;
+  }
+  /*Colocamos un estilo a los números en negro con menor tamaño de letra*/
+  .textnps2 {
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Alegreya Sans SC', sans-serif;
+  }
+  /*Colocamos un estilo a los números en rojo con mayor tamaño de letra*/
+  .textnps3 {
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    color: red;
+  }
+  /*Colocamos al botón que desencadena el menu-dropdown*/
+  .dropbtn {
+    color: rgb(0, 0, 0);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  /*Creamos el contenedor necesario para darle posición al contenido drop-down*/
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  /*El contenido dropdown oculto por default */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    font-family: 'Roboto', sans-serif;
+  }
+  /*Creamos el estilo de los links dentro del menu-dropdown*/
+  .dropdown-content a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    background-color: #F8C039;
+    border-bottom: 2px solid;
+    display: block;
+  }
+  /*Creamos un hover dentro de los links del menu-drop-down*/
+  .dropdown-content a:hover {
+    background-color: #c6c6c6
+  }
+  /*Mostramos el menu dropdown cuando se le hace hover*/
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  /*Ocultamos las otras pestañas por default*/
+  #section-students {
+    display: none;
+  }
+  /*Ocultamos las otras pestañas por default*/
+  #section-teachers {
+    display: none;
+  }
+  /*Colocamos estilo al modal*/
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  /* El contenido del Modal*/
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    font-family: 'Roboto', sans-serif;
+    width: 80%;
+  }
+  /*Colocamos estilo al botón de cierre del modal*/
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  /*Colocamos hover y focus al botón de cierre del modal*/
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  /*Colocamos estilo al texto de log-in*/
+  #log {
+    font-size: 25px;
+    color: #F8C039;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 40%;
+  }
+  /*Colocamos estilo al botón de log-in*/
+  #login {
+    color: rgb(255, 255, 255);
+    background-color: rgb(248, 191, 57);
+    border-bottom: 3px solid rgb(223, 169, 51);
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    width: 15%;
+    height: 10%;
+    margin-left: 40%;
+    margin-top: 50px;
+  }
+  /*Colocamos estilo a los campos de input de texto*/
+  .input {
+    font-size: 15px;
+    color: rgb(145, 145, 145);
+    font-family: 'Roboto', sans-serif;
+    margin-left: 40%;
+  }
+  /*Colocamos estilo a los campos de input de contraseña*/
+  .input2 {
+    font-size: 15px;
+    color: rgb(145, 145, 145);
+    font-family: 'Roboto', sans-serif;
+    margin-left: 40%;
+    margin-top: 40px;
+  }
+  /*Colocamos estilo al contenedor de estudiantes*/
+  .studentcontainer {
+    margin: 10%;
+    width: 72%;
+    height: 150px;
+    background-color: rgb(209, 209, 209);
+    display: grid;
+    grid-template-rows: 20% 80%;
+  }
+  /*Colocamos estilo al nombre de estudiantes*/
+  .studentname {
+    font-size: 25px;
+    color: #F8C039;
+    font-family: 'Roboto', sans-serif;
+  }
+  /*Colocamos estilo de dos columnas para los puntajes y la imagen*/
+  .twocolum {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+  }
+  /*Colocamos estilo al puntaje*/
+  .studentscores {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 5px;
+  }
+  /*Colocamos estilo al título del puntaje*/
+  .title{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    width: 150px;
+    background-color: rgb(187, 187, 187);
+  }
+  /*Colocamos estilo al subtítulo del puntaje*/
+  .subtitle{
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    width: 100px;
+    height: 20PX;
+    background-color: rgb(187, 187, 187);
+  }
+  /*Colocamos estilo a la foto de perfil del estudiante*/
+  .studentprofile {
+    width: 80px;
+    height: 80px;
+  }
+  
+  /*Colocamos estilo a la instrucción*/
+  .ins{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: #F8C039;
+    padding-top: 4px;
+    padding-left: 15px;
+  }
